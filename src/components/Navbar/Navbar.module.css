@@ -1,0 +1,32 @@
+.containerNavbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #5681df;
+  border-bottom: 1px solid #568cff;
+  padding: 10px;
+}
+
+.navbarButton {
+  margin-right: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #61dafb;
+}
+
+Input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  background-color: #61dafb;
+}
+input [Placeholder] {
+  color: white;
+}
+.cartIcon {
+  font-size: 1.5rem;
+  padding: 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
