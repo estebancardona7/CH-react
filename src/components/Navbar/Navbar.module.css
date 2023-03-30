@@ -1,0 +1,47 @@
+.navbarContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.Navbar {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 95vw;
+  height: 5rem;
+  gap: 30px;
+  background-color: rgba(18, 18, 18, 0.8);
+  color: white;
+  margin-top: 2vh;
+  padding: 0rem 2rem 0rem 2rem;
+  font-family: Roboto;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  backdrop-filter: blur(5px);
+}
+
+.navbarButton {
+  margin-right: 10px;
+  border-radius: 5px;
+  color: white;
+}
+.cartIcon {
+  font-size: 1.5rem;
+  padding: 5px;
+  background-color: #009a7b;
+  border-radius: 50%;
+}
+
+.cartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navLinksContainer {
+  display: flex;
+  flex-direction: row;
+}
