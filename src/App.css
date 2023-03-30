@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   background-color: #282c34;
+  /* height: 1500px; */
+  /* margin-bottom: 2vh; */
 }
 .AppHome {
   background-color: #282c34;
@@ -14,9 +16,8 @@
 }
 
 .AppFooter {
-  /* height: 10px; */
   font-size: small;
-  background-color: #282c34;
   color: white;
   position: fixed;
+  width: 80%;
 }

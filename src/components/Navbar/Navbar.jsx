@@ -1,12 +1,19 @@
 import { TextField } from "@mui/material";
-import { BsCart3 } from "react-icons/bs";
 import styles from "./Navbar.module.css";
 import { Box } from "@mui/system";
+import CartWidget from "../CartWidget/CartWidget";
 
 export const Navbar = () => {
   return (
     <nav className={styles.navbarContainer}>
       <div className={styles.Navbar}>
+        <img
+          className={styles.navBarLogo}
+          // src="https://i2.wp.com/www.thegraphicmac.com/wp-content/uploads/gen-samsung-logo-parody.jpg"
+          src="./logo192.png"
+          alt="logo"
+        />
+
         <ul className={styles.navLinksContainer}>
           <button className={styles.navbarButton}>Productos</button>
           <button className={styles.navbarButton}>Servicios</button>
@@ -23,17 +30,14 @@ export const Navbar = () => {
           >
             <TextField
               className="textField"
-              sx={{ color: "white", bgcolor: "grey" }}
+              sx={{ color: "white" }}
               id="outlined-basic"
               label="Buscar"
               variant="outlined"
             />
           </Box>
         </ul>
-        <div className={`${styles.cartIcon} ${styles.cartContainer}`}>
-          <i className="fas fa-shopping-cart"></i>
-          <BsCart3 className="faIcons" />
-        </div>
+        <CartWidget />
       </div>
     </nav>
   );

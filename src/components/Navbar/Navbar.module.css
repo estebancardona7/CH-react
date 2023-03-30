@@ -8,9 +8,9 @@
   position: fixed;
   justify-content: space-between;
   align-items: center;
-  width: 95vw;
+  width: 90vw;
   height: 5rem;
-  gap: 30px;
+  gap: 1vw;
   background-color: rgba(18, 18, 18, 0.8);
   color: white;
   margin-top: 2vh;
@@ -25,13 +25,12 @@
 .navbarButton {
   margin-right: 10px;
   border-radius: 5px;
+  /* color: rgb(0, 0, 0); */
+  height: 2rem;
+  background: none;
+  backdrop-filter: blur(5px);
+  font-family: Roboto;
   color: white;
-}
-.cartIcon {
-  font-size: 1.5rem;
-  padding: 5px;
-  background-color: #009a7b;
-  border-radius: 50%;
 }
 
 .cartContainer {
@@ -44,4 +43,16 @@
 .navLinksContainer {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  /* height: 4rem; */
+}
+
+.navBarLogo {
+  /* width: 100%; */
+  height: 50px;
+  size: 40px;
+}
+
+.navBarLogo:hover {
+  cursor: pointer;
 }
