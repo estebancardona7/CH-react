@@ -12,9 +12,9 @@ function App() {
       <div className="AppHome">
         <Home />
         <ItemList greetings={greetings} />
-        <div className="AppFooter">
-          <Footer />
-        </div>
+      </div>
+      <div className="AppFooter">
+        <Footer />
       </div>
     </div>
   );
