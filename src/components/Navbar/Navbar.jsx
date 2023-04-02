@@ -19,7 +19,7 @@ export const Navbar = () => {
             />
           </a>
         </div>
-        Samsung
+        BlueTech
         <Grid />
         <ul className={styles.navLinksContainer}>
           <a href="/productos">
