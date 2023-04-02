@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <div className="footer">
       <Typography />
-      Que diría un footer, ni idea.
+      Un footer típico.
     </div>
   );
 };

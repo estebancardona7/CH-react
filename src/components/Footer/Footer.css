@@ -5,9 +5,9 @@
   gap: 1vw;
   background-color: rgba(18, 18, 18, 0.8);
   color: white;
-  margin-bottom: 1vh;
-  position: absolute;
-  bottom: 0.75rem;
+  /* margin-bottom: 1vh; */
+  position: fixed;
+  bottom: 10px;
   width: 90%;
   margin: 0 auto;
   left: 0;

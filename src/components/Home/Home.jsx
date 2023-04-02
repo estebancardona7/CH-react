@@ -8,7 +8,8 @@ export const Home = () => {
       <main>
         <section className={styles.Main}>
           <div className="titleContainer">
-            Work in progress...
+            <Typography variant="h1" />
+            Work in progress..
             <Typography className={styles.p}>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Consequatur ex, voluptatum ratione dicta veniam dolorem eligendi
@@ -20,21 +21,6 @@ export const Home = () => {
               veritatis qui?
             </Typography>
           </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
         </section>
       </main>
     </>

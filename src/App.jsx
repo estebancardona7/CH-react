@@ -5,10 +5,12 @@ import { Home } from "./components/Home/Home.jsx";
 import ItemList from "./components/ItemList/ItemList";
 
 function App() {
-  let greetings = "User";
+  let greetings = "user";
   return (
     <div className="App">
-      <Navbar />
+      <div className="navBarContainer">
+        <Navbar />
+      </div>
       <div className="AppHome">
         <Home />
         <ItemList greetings={greetings} />
