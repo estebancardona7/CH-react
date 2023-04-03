@@ -14,7 +14,6 @@ export const Navbar = () => {
             <img
               className={styles.navBarLogo}
               src="https://i2.wp.com/www.thegraphicmac.com/wp-content/uploads/gen-samsung-logo-parody.jpg"
-              // src="./logo192.png"
               alt="logo"
             />
           </a>

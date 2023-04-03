@@ -1,4 +1,3 @@
-// import homeImage from "../../assets/web-development.png";
 import styles from "./Home.module.css";
 import Typography from "@mui/material/Typography";
 
