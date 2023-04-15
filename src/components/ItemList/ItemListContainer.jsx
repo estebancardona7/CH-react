@@ -3,7 +3,7 @@ import ItemList from "./ItemList";
 import { products } from "../../productsMock.js";
 
 const ItemListContainer = () => {
-  const [items, setItems] = useState([""]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     const tarea = new Promise((resolve) => {

@@ -10,7 +10,12 @@ import {
 const ItemCard = ({ item }) => {
   return (
     <Card sx={{ width: 300, height: 600 }}>
-      <CardMedia sx={{ height: 350 }} image={item.img} title={item.title} />
+      <CardMedia
+        sx={{ height: 350 }}
+        component="img"
+        image={item.img}
+        title={item.title}
+      />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {item.title}

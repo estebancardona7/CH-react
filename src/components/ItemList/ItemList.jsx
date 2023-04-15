@@ -13,7 +13,6 @@ const ItemList = ({ items }) => {
       }}
     >
       {items.map((item) => {
-        console.log(item.id);
         return <ItemCard item={item} key={item.id} />;
       })}
     </div>
