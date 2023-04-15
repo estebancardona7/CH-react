@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <div className="footer">
       <Typography />
-      Un footer típico.
+      Celulares que sí valen la pena.
     </div>
   );
 };

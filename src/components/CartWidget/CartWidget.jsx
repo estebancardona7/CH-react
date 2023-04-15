@@ -16,7 +16,7 @@ const CartWidget = () => {
   return (
     <div>
       <div className={`${styles.cartIcon} ${styles.cartContainer}`}>
-        <StyledBadge badgeContent={200} color="primary">
+        <StyledBadge badgeContent={"0"} color="primary">
           <BsCart3 className="faIcons" />
         </StyledBadge>
       </div>

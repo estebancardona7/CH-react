@@ -1,11 +1,21 @@
-import { useEffect } from "react";
+import ItemCard from "./ItemCard.jsx";
 
-const ItemList = ({ greetings }) => {
-  useEffect(() => {}, [greetings]);
-
+const ItemList = ({ items }) => {
   return (
-    <div>
-      <span>Un saludo {greetings}</span>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+        flexWrap: "wrap",
+        minHeight: "90vh",
+        padding: "40px",
+        gap: "20px",
+      }}
+    >
+      {items.map((item) => {
+        console.log(item.id);
+        return <ItemCard item={item} key={item.id} />;
+      })}
     </div>
   );
 };
