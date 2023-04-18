@@ -4,7 +4,7 @@ export const products = [
     title: "Samsung Galaxy S20",
     description: "Un gran smartphone con pantalla de 6.2 pulgadas.",
     price: 899,
-    img: "https://res.cloudinary.com/ddorvnjnt/image/upload/t_Facebook%20ad/v1681569896/61XsDK3-1hL._AC_UF894_1000_QL80__htb4ux.jpg",
+    img: "https://res.cloudinary.com/ddorvnjnt/image/upload/v1681569896/Samsung%20S20.jpg",
     stock: 4,
   },
   {
