@@ -5,7 +5,7 @@ const ItemList = ({ items }) => {
     <div
       style={{
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "space-around",
         flexWrap: "wrap",
         minHeight: "90vh",
         padding: "40px",

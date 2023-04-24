@@ -8,19 +8,17 @@
   position: fixed;
   justify-content: center;
   align-items: center;
-  width: 60vw;
+  width: 90vw;
   height: 5rem;
   gap: 1vw;
   background-color: rgba(18, 18, 18, 0.8);
   color: white;
-  margin-top: 2vh;
-  padding: 0rem 2rem 0rem 2rem;
   font-family: Roboto;
   z-index: 1;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   backdrop-filter: blur(5px);
-  transition: 0.5s ease-in;
+  transition: 0.1s ease-out;
 }
 
 .navbarButton {
@@ -30,6 +28,7 @@
   background: none;
   backdrop-filter: blur(5px);
   font-family: Roboto;
+  font-size: 16px;
   color: white;
 }
 
@@ -38,8 +37,12 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-left: auto; /* Agrega un margen izquierdo automático para empujar el carrito hacia la derecha */
 }
 
+.cartContainer:hover {
+  cursor: pointer;
+}
 .navLinksContainer {
   display: flex;
   flex-direction: row;
@@ -47,10 +50,28 @@
 }
 
 .navBarLogo {
-  height: 50px;
-  size: 40px;
+  height: 3.5rem; /* Reduce el tamaño del logo */
+  margin-right: 1rem; /* Agrega un margen derecho */
+  margin-left: 10px;
 }
-
 .navBarLogo:hover {
   cursor: pointer;
+}
+
+.textField input {
+  color: white;
+}
+
+@media screen and (max-width: 850px) {
+  .navLinksContainer {
+    display: none;
+  }
+  .homeButtons {
+    flex-wrap: wrap;
+  }
+  .Navbar {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
 }

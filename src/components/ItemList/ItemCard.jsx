@@ -1,3 +1,5 @@
+import React from "react";
+import "./ItemCard.css";
 import {
   Box,
   Button,
@@ -7,11 +9,13 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+
 const ItemCard = ({ item }) => {
   return (
     <Card sx={{ width: 300, height: 600 }}>
       <CardMedia
-        sx={{ height: 350 }}
+        className="cardMedia"
+        sx={{ height: 350, objectFit: "unset" }}
         component="img"
         image={item.img}
         title={item.title}
