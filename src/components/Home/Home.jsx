@@ -1,5 +1,4 @@
 import styles from "./Home.module.css";
-import Typography from "@mui/material/Typography";
 
 export const Home = () => {
   return (

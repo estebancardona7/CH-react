@@ -6,6 +6,7 @@ export const products = [
     price: 899,
     img: "https://res.cloudinary.com/ddorvnjnt/image/upload/v1681569896/Samsung%20S20.jpg",
     stock: 4,
+    category: "samsung",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ export const products = [
     price: 999,
     img: "https://res.cloudinary.com/ddorvnjnt/image/upload/v1681597517/iphone12_nzunvr.png",
     stock: 9,
+    category: "apple",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ export const products = [
     price: 699,
     img: "https://res.cloudinary.com/ddorvnjnt/image/upload/v1681597619/oneplus_ykr1om.jpg",
     stock: 2,
+    category: "oneplus",
   },
   {
     id: 4,
@@ -30,5 +33,6 @@ export const products = [
     price: 799,
     img: "https://res.cloudinary.com/ddorvnjnt/image/upload/v1681597721/mi11_jn9dd8.jpg",
     stock: 1,
+    category: "xiaomi",
   },
 ];

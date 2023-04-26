@@ -9,6 +9,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ItemCard = ({ item }) => {
   return (
@@ -40,9 +41,11 @@ const ItemCard = ({ item }) => {
         }}
       >
         <CardActions>
-          <Button variant="contained" size="small">
-            Ver detalle
-          </Button>
+          <Link to={`/itemDetail/${item.id}`}>
+            <Button variant="contained" size="small">
+              Ver detalle
+            </Button>
+          </Link>
         </CardActions>
       </Box>
     </Card>

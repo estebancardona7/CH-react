@@ -1,13 +1,7 @@
-.App {
+.app-container {
   text-align: center;
   background-color: #282c34;
-  /* height: 1500px; */
-  /* margin-bottom: 2vh; */
-}
-
-.navBarContainer {
-  /* position: fixed; */
-  padding-top: 20px;
+  min-height: 100vh;
 }
 
 .AppHome {
@@ -19,4 +13,12 @@
   justify-content: center;
   color: white;
   padding-top: 120px;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+  color: white;
 }
