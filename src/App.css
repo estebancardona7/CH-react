@@ -15,6 +15,15 @@
   padding-top: 120px;
 }
 
+.AppHomeDetailed {
+  background-color: #282c34;
+  min-height: 100vh;
+  padding-top: 15vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
 .error-message {
   display: flex;
   justify-content: center;

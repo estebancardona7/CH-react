@@ -1,6 +1,5 @@
-import { Grid, TextField } from "@mui/material";
+import { Grid } from "@mui/material";
 import styles from "./Navbar.module.css";
-import { Box } from "@mui/system";
 import CartWidget from "../CartWidget/CartWidget";
 import { Outlet, Link } from "react-router-dom";
 
@@ -12,7 +11,7 @@ export const Navbar = () => {
         <Grid item xs={12} sm={4} />
         <div className={styles.Navbar}>
           <div>
-            <Link to="/">
+            <Link to="/" className={styles.navbarButtonContainer}>
               <img
                 className={styles.navBarLogo}
                 src="https://i2.wp.com/www.thegraphicmac.com/wp-content/uploads/gen-samsung-logo-parody.jpg"
@@ -22,42 +21,33 @@ export const Navbar = () => {
           </div>
           BlueTech
           <Grid />
-          <ul className={styles.navLinksContainer}>
-            <Link to="/">
+          <div className={styles.navLinksContainer}>
+            <Link to="/" className={styles.navbarButtonContainer}>
               <button className={styles.navbarButton}>Todos</button>
             </Link>
-            <Link to="category/apple">
+
+            <Link to="category/apple" className={styles.navbarButtonContainer}>
               <button className={styles.navbarButton}>Apple</button>
             </Link>
-            <Link to="category/samsung">
+
+            <Link
+              to="category/samsung"
+              className={styles.navbarButtonContainer}
+            >
               <button className={styles.navbarButton}>Samsung</button>
             </Link>
-            <Link to="category/oneplus">
+
+            <Link
+              to="category/oneplus"
+              className={styles.navbarButtonContainer}
+            >
               <button className={styles.navbarButton}>OnePlus</button>
             </Link>
-            <Link to="category/xiaomi">
+
+            <Link to="category/xiaomi" className={styles.navbarButtonContainer}>
               <button className={styles.navbarButton}>Xiaomi</button>
             </Link>
-
-            <Box
-              component="form"
-              sx={{
-                "& > :not(style)": { m: 1, width: "100%" },
-                width: "100%",
-                maxWidth: "200px",
-              }}
-              noValidate
-              autoComplete="off"
-            >
-              <TextField
-                className={styles.textField}
-                sx={{ color: "white", width: "100%" }}
-                id="outlined-basic"
-                label="Buscar"
-                variant="outlined"
-              />
-            </Box>
-          </ul>
+          </div>
           <CartWidget />
         </div>
         <Grid />

@@ -1,7 +1,13 @@
-.cardMedia {
-  transition: transform 0.2s ease-in-out;
+.cardContainer {
+  transition: transform 0.3s ease-in-out;
 }
 
-.cardMedia:hover {
-  transform: scale(1.1);
+.cardContainer:hover {
+  transform: translateY(-20px);
+  transition: transform 0.1s ease;
+}
+
+.cardContainer:not(:hover) {
+  transform: translateY(0);
+  transition: transform 0.1s ease-in-out;
 }

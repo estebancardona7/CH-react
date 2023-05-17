@@ -1,5 +1,4 @@
 import React from "react";
-import "./ItemCard.css";
 import {
   Box,
   Button,
@@ -11,9 +10,10 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 
+import "./ItemCard.css";
 const ItemCard = ({ item }) => {
   return (
-    <Card sx={{ width: 300, height: 600 }}>
+    <Card className="cardContainer" sx={{ width: 300, height: 600 }}>
       <CardMedia
         className="cardMedia"
         sx={{ height: 350, objectFit: "unset" }}
@@ -28,7 +28,7 @@ const ItemCard = ({ item }) => {
         <Typography variant="body2" color="text.secondary">
           {item.description}
         </Typography>
-        <Typography variant="body2" color="primary">
+        <Typography variant="body2" color="primary" pt={2}>
           usd {item.price}
         </Typography>
       </CardContent>

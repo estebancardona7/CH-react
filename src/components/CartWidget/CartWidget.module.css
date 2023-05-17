@@ -1,9 +1,10 @@
 .cartIcon {
   font-size: 1.5rem;
   padding: 5px;
-  background-color: #414141;
+  /* background-color: #413f3f; */
   border-radius: 20%;
   margin-right: 20px;
+  color: white;
 }
 
 .counter {
@@ -12,10 +13,6 @@
   position: fixed;
 }
 
-.cartContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin-left: auto; /* Agrega un margen izquierdo automático para empujar el carrito hacia la derecha */
+.cartIcon:hover {
+  transform: scale(1.1);
 }

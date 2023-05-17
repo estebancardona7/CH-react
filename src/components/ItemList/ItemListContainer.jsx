@@ -8,7 +8,7 @@ const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   const { categoryName } = useParams();
-  console.log(categoryName);
+  // console.log(categoryName);
 
   useEffect(() => {
     const productsFiltered = products.filter(
@@ -23,7 +23,7 @@ const ItemListContainer = () => {
   }, [categoryName]);
 
   return (
-    <div>
+    <div className="itemCard">
       <ItemList items={items} />
     </div>
   );
