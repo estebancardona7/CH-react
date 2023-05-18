@@ -24,12 +24,13 @@ const CartContextProvider = ({ children }) => {
         if (elemento.id === producto.id) {
           return {
             ...elemento,
-            quantity: elemento.quantity + producto.quantity,
+            quantity: producto.quantity,
           };
         } else {
           return elemento;
         }
       });
+
       setCart(newCart);
     } else {
       setCart([...cart, producto]);

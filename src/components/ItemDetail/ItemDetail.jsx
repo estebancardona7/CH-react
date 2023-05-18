@@ -2,15 +2,15 @@ import React from "react";
 import "./ItemDetail.css";
 import { Box, Button, CardActions, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import CounterContainer from "../components/Counter/Counter";
+import CounterContainer from "../Counter/Counter";
 
-const ItemDetail = ({ product, onAdd }) => {
+const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
   return (
     <Grid container spacing={2} className="detailContainer">
-      <Grid item xs={12} sm={6}>
+      <Grid item md={6} xs={12}>
         <img src={product.img} alt="" className="itemDetailImg" />
       </Grid>
-      <Grid item xs={12} sm={6}>
+      <Grid item md={6} xs={12}>
         <Box
           display="flex"
           flexDirection="column"
@@ -36,7 +36,11 @@ const ItemDetail = ({ product, onAdd }) => {
             </Typography>
           </Box>
           <Box pb={10}>
-            <CounterContainer stock={product.stock} onAdd={onAdd} />
+            <CounterContainer
+              stock={product.stock}
+              onAdd={onAdd}
+              initial={cantidadTotal}
+            />
             <Link to={`/`}>
               <Button variant="contained" size="small">
                 Regresar

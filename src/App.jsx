@@ -2,7 +2,7 @@ import "./App.css";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer/Footer";
 import ItemListContainer from "./components/ItemList/ItemListContainer";
-import { ItemDetailContainer } from "./ItemDetail/ItemDetailContainer";
+import { ItemDetailContainer } from "./components/ItemDetail/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartContainer from "./components/Cart/CartContainer";
 import FormContainer from "./components/Form/FormContainer";

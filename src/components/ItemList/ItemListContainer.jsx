@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
-// import axios from "axios";
 import { useParams } from "react-router-dom";
 import { products } from "../../productsMock";
+import { BarLoader } from "react-spinners";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   const { categoryName } = useParams();
-  // console.log(categoryName);
 
   useEffect(() => {
     const productsFiltered = products.filter(
@@ -16,7 +15,9 @@ const ItemListContainer = () => {
     );
 
     const tarea = new Promise((resolve, reject) => {
-      resolve(categoryName ? productsFiltered : products);
+      setTimeout(() => {
+        resolve(categoryName ? productsFiltered : products);
+      }, 1700);
     });
 
     tarea.then((res) => setItems(res)).catch((error) => console.log(error));
@@ -24,7 +25,20 @@ const ItemListContainer = () => {
 
   return (
     <div className="itemCard">
-      <ItemList items={items} />
+      {items.length === 0 ? (
+        <div>
+          <BarLoader
+            color="#1672eb"
+            cssOverride={{}}
+            height={12}
+            loading
+            speedMultiplier={1.3}
+            width={200}
+          />
+        </div>
+      ) : (
+        <ItemList items={items} />
+      )}
     </div>
   );
 };
