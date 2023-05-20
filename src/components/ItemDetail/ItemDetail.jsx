@@ -1,6 +1,6 @@
 import React from "react";
 import "./ItemDetail.css";
-import { Box, Button, CardActions, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import CounterContainer from "../Counter/Counter";
 
@@ -35,18 +35,25 @@ const ItemDetail = ({ product, onAdd, cantidadTotal }) => {
               {product.price} usd.-
             </Typography>
           </Box>
-          <Box pb={10}>
-            <CounterContainer
-              stock={product.stock}
-              onAdd={onAdd}
-              initial={cantidadTotal}
-            />
-            <Link to={`/`}>
-              <Button variant="contained" size="small">
-                Regresar
-              </Button>
-            </Link>
-          </Box>
+
+          {product.stock > 0 ? (
+            <Box pb={10}>
+              <CounterContainer
+                stock={product.stock}
+                onAdd={onAdd}
+                initial={cantidadTotal}
+              />
+              <Link to={`/`}>
+                <Button variant="contained" size="small">
+                  Regresar
+                </Button>
+              </Link>
+            </Box>
+          ) : (
+            <Typography variant="h5" pb={10}>
+              SIN STOCK.
+            </Typography>
+          )}
         </Box>
       </Grid>
     </Grid>

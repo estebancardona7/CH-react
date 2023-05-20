@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
-import { products } from "../../productsMock";
 import { BarLoader } from "react-spinners";
+import { db } from "../../firebaseconfig";
+import { getDocs, collection, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -10,23 +11,35 @@ const ItemListContainer = () => {
   const { categoryName } = useParams();
 
   useEffect(() => {
-    const productsFiltered = products.filter(
-      (prod) => prod.category === categoryName
-    );
+    let consulta;
+    const itemColecction = collection(db, "products");
 
-    const tarea = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(categoryName ? productsFiltered : products);
-      }, 1700);
-    });
+    if (categoryName) {
+      const q = query(itemColecction, where("category", "==", categoryName));
+      consulta = q;
+    } else {
+      consulta = itemColecction;
+    }
 
-    tarea.then((res) => setItems(res)).catch((error) => console.log(error));
+    getDocs(consulta)
+      .then((res) => {
+        const products = res.docs.map((product) => {
+          return {
+            ...product.data(),
+            id: product.id,
+          };
+        });
+
+        setItems(products);
+      })
+      .catch((err) => console.log(err));
   }, [categoryName]);
 
   return (
     <div className="itemCard">
       {items.length === 0 ? (
         <div>
+          Cargando stock...
           <BarLoader
             color="#1672eb"
             cssOverride={{}}

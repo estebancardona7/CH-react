@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 export const CartContext = createContext();
 
@@ -43,6 +44,13 @@ const CartContextProvider = ({ children }) => {
 
   const deleteProductById = (id) => {
     const productosFiltrados = cart.filter((elemento) => elemento.id !== id);
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Eliminado con éxito",
+      showConfirmButton: false,
+      timer: 1500,
+    });
     setCart(productosFiltrados);
   };
 

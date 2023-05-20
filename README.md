@@ -11,10 +11,6 @@ To run the project locally, follow these steps:
 3. Start the development server using `npm start`.
 4. Open `http://localhost:3000` in your web browser to view the app.
 
-## Usage
-
-[Add description of how to use the app and its main functionalities. Include screenshots or GIFs if possible.]
-
 ## Contributing
 
 If you would like to contribute to CH React, please follow these steps:
@@ -25,10 +21,4 @@ If you would like to contribute to CH React, please follow these steps:
 4. Push your changes to your fork using `git push origin your-branch-name`.
 5. Create a pull request on the original repository with a description of your changes.
 
-## License
-
-[Add license information if applicable.]
-
-## Credits
-
-[Add credits and acknowledgments for any libraries, tools, or other resources used in the project.]
+#

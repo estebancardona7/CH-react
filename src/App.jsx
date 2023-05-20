@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartContainer from "./components/Cart/CartContainer";
 import FormContainer from "./components/Form/FormContainer";
 import CartContextProvider from "./context/CartContext.jsx";
+import { FormCheckoutContainer } from "./components/FormCheckout/FormCheckoutContainer";
 
 function App() {
   return (
@@ -41,6 +42,15 @@ function App() {
             />
             <Route path="/cart" element={<CartContainer />} />
             <Route path="/form" element={<FormContainer />} />
+            <Route
+              path="/checkout"
+              element={
+                <div className="AppHome">
+                  <FormCheckoutContainer />
+                </div>
+              }
+            />
+
             <Route
               path="*"
               element={

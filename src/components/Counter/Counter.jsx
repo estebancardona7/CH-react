@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CounterPresentation from "./CounterPresentation";
+import Swal from "sweetalert2";
 
 const CounterContainer = ({ stock, onAdd, initial = 1 }) => {
   const [counter, setCounter] = useState(initial);
@@ -9,7 +10,15 @@ const CounterContainer = ({ stock, onAdd, initial = 1 }) => {
   }, [initial]);
 
   const sumar = () => {
-    counter < stock ? setCounter(counter + 1) : alert("Stock máximo alcanzado");
+    counter < stock
+      ? setCounter(counter + 1)
+      : Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "No hay suficiente stock",
+          showConfirmButton: false,
+          timer: 1500,
+        });
   };
 
   const restar = () => {
